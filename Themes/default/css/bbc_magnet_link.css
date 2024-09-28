@@ -1,0 +1,153 @@
+/**
+ * BBC Magnet Link
+ * Version: 1.0.6
+ * Author: Dominik
+ * 2024
+ * 
+ * version smf 2.0.* & 2.1.*
+ */
+.magnet_body {
+	display: flex;
+	align-items: center;
+}
+.magnet_click {
+    margin-top: -0.8vh;
+    margin-left: -0.3em;
+    font-size: 0.625rem;
+}
+.magnet_link {
+	content:url(../images/bbc/Magnet_Icon.png);
+}
+.magnet_pos {
+    margin: 0.2vh 0.35vh 0.2vh 0.2vh;
+}
+.magnet_text_body {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	column-gap: 0.5vh;
+	justify-content: space-evenly;
+}
+.magnet_return {
+	white-space: nowrap;
+}
+.sceditor-button-magnet div {
+	background-position: 20% 50%;
+}
+.loading-text span {
+  display: inline-block;
+  margin: 0 5px;
+  color: black;
+  font-family: &quot;Quattrocento Sans&quot;, sans-serif;
+}
+.loading-text span:nth-child(1) {
+  filter: blur(0px);
+  -webkit-animation: blur-text 1.5s 0s infinite linear alternate;
+          animation: blur-text 1.5s 0s infinite linear alternate;
+}
+.loading-text span:nth-child(2) {
+  filter: blur(0px);
+  -webkit-animation: blur-text 1.5s 0.2s infinite linear alternate;
+          animation: blur-text 1.5s 0.2s infinite linear alternate;
+}
+.loading-text span:nth-child(3) {
+  filter: blur(0px);
+  -webkit-animation: blur-text 1.5s 0.4s infinite linear alternate;
+          animation: blur-text 1.5s 0.4s infinite linear alternate;
+}
+.loading-text span:nth-child(4) {
+  filter: blur(0px);
+  -webkit-animation: blur-text 1.5s 0.6s infinite linear alternate;
+          animation: blur-text 1.5s 0.6s infinite linear alternate;
+}
+.loading-text span:nth-child(5) {
+  filter: blur(0px);
+  -webkit-animation: blur-text 1.5s 0.8s infinite linear alternate;
+          animation: blur-text 1.5s 0.8s infinite linear alternate;
+}
+.loading-text span:nth-child(6) {
+  filter: blur(0px);
+  -webkit-animation: blur-text 1.5s 1s infinite linear alternate;
+          animation: blur-text 1.5s 1s infinite linear alternate;
+}
+.loading-text span:nth-child(7) {
+  filter: blur(0px);
+  -webkit-animation: blur-text 1.5s 1.2s infinite linear alternate;
+          animation: blur-text 1.5s 1.2s infinite linear alternate;
+}
+
+@-webkit-keyframes blur-text {
+  0% {
+    filter: blur(0px);
+  }
+  100% {
+    filter: blur(4px);
+  }
+}
+
+@keyframes blur-text {
+  0% {
+    filter: blur(0px);
+  }
+  100% {
+    filter: blur(4px);
+  }
+}
+
+.magnet-button-glow {
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.magnet-button-glow:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.magnet-button-glow:active {
+    color: #000
+}
+
+.magnet-button-glow:active:after {
+    background: transparent;
+}
+
+.magnet-button-glow:hover:before {
+    opacity: 1;
+}
+
+.magnet-button-glow:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}

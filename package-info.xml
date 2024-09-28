@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<id>Dominik:BBC_Magnet_Link</id>
+	<name>BBC Magnet Link</name>
+	<version>1.0.6</version>
+	<type>modification</type>
+
+	<install for="2.0 - 2.1.99">
+		<readme parsebbc="true">Readme/Install.txt</readme>
+		<modification type="file">modifications.xml</modification>
+		<!-- Sources / Theme Dir -->
+		<require-dir name="Themes" destination="$boarddir">Template &amp; Language files</require-dir>
+		<require-dir name="Sources" destination="$boarddir">Install soucre files</require-dir>
+		
+		<database>Install.php</database>
+		<redirect url="$scripturl?action=admin;area=modsettings;sa=magnet" timeout="1000"></redirect>
+	</install>
+
+	<uninstall for="2.0 - 2.1.99">
+		<readme parsebbc="true">Readme/Uninstall.txt</readme>
+		<modification type="file" reverse="true">modifications.xml</modification>
+		<!-- Sources Dir -->
+		<remove-file name="$sourcedir/Subs-Magnet_Link.php"/>
+		<remove-file name="$sourcedir/Subs-Magnet_Scraper.php"/>
+		<remove-file name="$sourcedir/Subs-Magnet_Update.php"/>
+		<remove-file name="$sourcedir/Subs-Magnet_Counter.php"/>
+		<!-- Images Dir -->
+		<remove-file name="$imagesdir/bbc/Magnet_Icon.png"/>
+		<remove-file name="$imagesdir/bbc/Magnet_Icon.gif"/>
+		<!-- BBC Languages -->
+		<remove-file name="$languagedir/bbc_magnet_link.english.php"/>
+		<remove-file name="$languagedir/bbc_magnet_link.english-utf8.php"/>
+		<remove-file name="$languagedir/bbc_magnet_link.polish.php"/>
+		<remove-file name="$languagedir/bbc_magnet_link.polish-utf8.php"/>
+		<!-- BBC Themes -->
+		<remove-file name="$themedir/css/bbc_magnet_link.css"/>
+		<remove-file name="$themedir/scripts/bbc_magnet_link.js"/>
+
+		<database>uninstall-db.php</database>
+		<code>uninstall-code.php</code>
+		<redirect url="$scripturl?action=admin;area=packages" timeout="2000"></redirect>
+	</uninstall>
+
+</package-info>

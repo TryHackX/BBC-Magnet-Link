@@ -1,0 +1,5 @@
+[center][size=25pt][font=tahoma][color=#006666][b]BBC Magnet Link[/b][/color][/font][/size][/center]
+[hr]
+[center][size=12pt][font=tahoma][color=#006666][b]Thanks for installing BBC Magnet Link![/b]
+Mod create by Dominik.[/color][/font][/size]
+Version 1.0.6 for SMF 2.0.* & 2.1.*[/center]

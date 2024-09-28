@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+
+<modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
+	<id>Dominik:BBC_Magnet_Link</id>
+	<version>1.0.6</version>
+
+	<file name="$sourcedir/Subs.php">
+		<operation>
+			<search position="after"><![CDATA[// Sift out the bbc for a performance improvement.]]></search>
+			<add><![CDATA[// BBC Magnet Link
+	$message = Magnet_Link_Preparse($message, $cache_id);
+
+	]]></add>
+		</operation>
+	</file>
+
+</modification>
